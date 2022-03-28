@@ -15,7 +15,7 @@ const SearchLaunches = () => {
     try {
       const {data: response} = await axios.get('https://api.spacexdata.com/v4/launches/' + searchedID);
       setData(response);
-      // console.log("searchData: ", response);
+      console.log("searchData: ", response.links.webcast);
       const responseTime = response.date_unix;
       setTime(responseTime*1000);
       // console.log("responseTime: ", responseTime);
@@ -106,6 +106,9 @@ const SearchLaunches = () => {
                 {data.success === true && <div className='search-result_above_indicator_success'></div>}
                 {data.success === false && <div className='search-result_above_indicator_failure'></div>}
                 </div>
+              </div>
+              <div className="search-result_video">
+                <iframe width="560" height="315" src={"https://www.youtube.com/embed/" + data.links.youtube_id + "?controls=0"} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div className='search-result_below'>
                 {counterStart !== 'NaN:NaN:NaN:NaN:NaN' && <div className='search-result_below_elapsed-time'>

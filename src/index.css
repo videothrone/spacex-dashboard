@@ -136,7 +136,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 0 15rem 0;
+  margin: 0 0 2rem 0;
 }
 .search-result_above_name {
   font-size: 4rem;
@@ -159,10 +159,24 @@ body {
   height: 2.5rem;
   width: 2.5rem;
 }
+.search-result_video {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.search-result_video iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 .search-result_below {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 2rem 0 0 0;
 }
 .search-result_below_elapsed-time_counter {
   background-color: var(--text-box-bg);
@@ -226,6 +240,7 @@ body {
   padding: 2rem;
   text-align: center;
 }
+
 
 /* MEDIA QUERIES */
 @media all and (max-width: 900px) {
