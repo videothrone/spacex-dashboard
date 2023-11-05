@@ -4,6 +4,12 @@ A minimal React-based SPA / Dashboard that displays launch data via the SpaceX A
 
 ---
 
+
+## Preview
+
+[![SpaceX Dashboard](/public/Screenshot.png)](https://main--zesty-taiyaki-174272.netlify.app)
+
+
 ## Local setup
 
 -  Clone therepo
@@ -12,7 +18,7 @@ A minimal React-based SPA / Dashboard that displays launch data via the SpaceX A
 
 ## Live
 
-[https://main--zesty-taiyaki-174272.netlify.app](https://main--zesty-taiyaki-174272.netlify.app/)
+[https://main--zesty-taiyaki-174272.netlify.app](https://main--zesty-taiyaki-174272.netlify.app)
 
 ## Tech
 
@@ -22,4 +28,3 @@ A minimal React-based SPA / Dashboard that displays launch data via the SpaceX A
 
 -  On load the app pulls the latest launches from the SpaceX API and displays them as little info boxes
 -  A search bar allows the user to search for individual launch IDs which then loads and displays additional data including the launch video in a more prominent info box
-
