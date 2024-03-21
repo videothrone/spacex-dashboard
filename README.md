@@ -1,24 +1,23 @@
 # SpaceX Dashboard
 
-A minimal React-based SPA / Dashboard that displays launch data via the SpaceX API. This was built in the beginning of 2022 as a test for a job application and was the first React app I had built since my bootcamp. May be subject to upgrades and improvements.
+A minimal React-based SPA / Dashboard that displays launch data via the SpaceX API. This was built in the beginning of 2022 in about half a day as a test assignement for a job application and was the first React app I had built since my bootcamp. May be subject to upgrades and improvements down the line.
 
 ---
 
-
 ## Preview
 
-[![SpaceX Dashboard](/public/Screenshot.png)](https://main--zesty-taiyaki-174272.netlify.app)
+[![SpaceX Dashboard](/public/Screenshot.png)](https://space-x-dash.netlify.app/)
 
 
 ## Local setup
 
--  Clone therepo
+-  Clone the repo
 -  Run `npm i`
 -  Run `npm start`
 
 ## Live
 
-[https://main--zesty-taiyaki-174272.netlify.app](https://main--zesty-taiyaki-174272.netlify.app)
+[https://space-x-dash.netlify.app/](https://space-x-dash.netlify.app/)
 
 ## Tech
 
