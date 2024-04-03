@@ -1,0 +1,126 @@
+.searchbar-container {
+  background-color: var(--info-box);
+  border-radius: 0.5rem;
+  border: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  justify-content: center;
+  margin: 1% var(--padding-left-right-desktop-large) 5rem var(--padding-left-right-desktop-large);
+  padding: 2rem;
+}
+
+@media all and (max-width: 1440px) {
+  .searchbar-container {
+    margin: 1% var(--padding-left-right-desktop) 5rem var(--padding-left-right-desktop);
+  }
+}
+
+@media all and (max-width: 900px) {
+  .searchbar-container {
+    margin: 2rem;
+  }
+}
+
+.searchbar-container input[type=search] {
+  border: solid .3rem var(--light-crimson);
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  min-width: 30rem;
+  padding: 1rem;
+
+  &::-webkit-search-cancel-button {
+    cursor: pointer;
+  }
+}
+
+.searchbar-container input[type=search]:focus {
+  outline: none;
+}
+
+@media all and (max-width: 560px) {
+  .searchbar-container input[type=search] {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 479px) {
+  .searchbar-container input[type=search] {
+    min-width: 100%;
+  }
+}
+
+.searchbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media all and (max-width: 518px) {
+  .searchbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+
+.submit-button {
+  background-color: var(--light-crimson);
+  border: solid .3rem var(--light-crimson);
+  border-radius: 0.5rem;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.7rem;
+  min-width: 12rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  -o-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -ms-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -moz-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-out, background 0.3s ease-in;
+  transition: color 0.3s ease-out, background 0.3s ease-in;
+}
+
+.submit-button:hover {
+  background-color: var(--white);
+  color: var(--light-crimson);
+  -o-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -ms-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -moz-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-out, background 0.3s ease-in;
+  transition: color 0.3s ease-out, background 0.3s ease-in;
+}
+
+.submit-button:focus {
+  outline: none;
+}
+
+@media all and (max-width: 560px) {
+  .submit-button {
+    width: 100%;
+  }
+}
+
+.error-msg {
+  background-color: var(--info-box);
+  border-radius: 0.5rem;
+  color: var(--indicator-failure);
+  font-size: 1.6rem;
+  margin: 2rem var(--padding-left-right-desktop-large);
+  overflow: hidden;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media all and (max-width: 1440px) {
+  .error-msg {
+    margin: 2rem var(--padding-left-right-desktop);
+  }
+}
+
+@media all and (max-width: 900px) {
+  .error-msg {
+    margin: 2rem;
+  }
+}

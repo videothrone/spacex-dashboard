@@ -1,17 +1,19 @@
-import SearchLaunches from './searchLaunches';
-import GetLaunches from './getLaunches';
+import SearchLaunches from './components/searchLaunches/SearchLaunches';
+import LatestLaunches from './components/latestLaunches/LatestLaunches';
 
 function App() {
   return (
-    <div>
-    <header>
-      <div className="header-headline">
-        <h1 className="font-gradient">SPACEX DASHBOARD</h1>
-      </div>
-    </header>
-    <SearchLaunches />
-    <GetLaunches />
-    </div>
+    <>
+      <header>
+        <div className="header__headline-wrapper">
+          <h1 className="header__headline font-gradient">SPACEX ✹ DASHBOARD</h1>
+        </div>
+      </header>
+      <main>
+        <SearchLaunches />
+        <LatestLaunches />
+      </main>
+    </>
   );
 }
 

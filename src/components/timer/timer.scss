@@ -1,0 +1,14 @@
+.search-result__below-elapsed-time-counter {
+  background-color: var(--text-box-bg);
+  border: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+}
+
+@media all and (max-width: 900px) {
+  .search-result__below-elapsed-time-counter {
+    font-size: 2rem;
+  }
+}

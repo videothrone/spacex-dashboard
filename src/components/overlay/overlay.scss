@@ -1,0 +1,40 @@
+.overlay {
+  align-items: center;
+  animation: fadeIn 0.3s ease-in forwards;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 666;
+}
+
+.overlay-message {
+  color: var(--color-white);
+  background-color: var(--light-crimson);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.8rem;
+  padding: 2rem;
+}
+
+.overlay-icon svg {
+  border: 0;
+  color: var(--color-white);
+  fill: #fff;
+  margin-left: 0.5rem;
+  margin-top: -0.5rem;
+  width: 1.8rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
