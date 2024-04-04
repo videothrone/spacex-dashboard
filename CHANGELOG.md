@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ---
 
-## [2.0.0] - 2024-03-31
+## [2.0.1] - 2024-04-04
+
+### Changed
+* Some markup and CSS refactoring and clean-up
+
+### Added
+* Add LaunchBox component, that contains the launch box element
+
+## [2.0.0] - 2024-04-03
 
 ### Changed
 * Make the API call a reusable and importable function
