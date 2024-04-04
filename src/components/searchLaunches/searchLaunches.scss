@@ -14,7 +14,7 @@
   }
 }
 
-.search-result h2 {
+.search-result__headline  {
   font-size: 3rem;
   margin-bottom: -1rem;
 }
@@ -39,6 +39,7 @@
 .search-result__above-name {
   font-size: 4rem;
   font-weight: 500;
+  margin: 0;
 }
 
 @media all and (max-width: 900px) {
@@ -95,4 +96,8 @@
   .search-result__below-id {
     margin: 1rem 0 0 0;
   }
+}
+
+.search-result__below-id-text {
+  font-weight: bold;
 }

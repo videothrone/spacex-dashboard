@@ -47,27 +47,27 @@ const SearchLaunches = () => {
     <>
       <SearchBar searchItems={searchItems} searchForm={searchForm} />
       {searching && <div className='error-msg'><Loader /></div>}
-      {errorMsg && <div className='error-msg'>Search result is not valid</div>}
+      {errorMsg && <div className='error-msg'>Search ID is not valid</div>}
       {!loading && !errorMsg && (
       <div className='search-result'>
-        <h2 className="font-gradient">Search result</h2>
+        <h2 className="search-result__headline font-gradient">Search result</h2>
             <div className='search-result-container'>
               <div className='search-result__above'>
-                <div className='search-result__above-name'>
-                {data.name}
-                </div>
+                <h2 className='search-result__above-name'>
+                  {data.name}
+                </h2>
                 <div className='search-result__above-indicator'>
-                {data.success === true && <div className='search-result__above-indicator-success'></div>}
-                {data.success === false && <div className='search-result__above-indicator-failure'></div>}
+                  {data.success === true && <div className='search-result__above-indicator-success' alt='Launch successful'><span className='visually-hidden' >Launch successful</span></div>}
+                  {data.success === false && <div className='search-result__above-indicator-failure'alt='Launch was a failure'><span className='visually-hidden' >Launch was a failure</span></div>}
                 </div>
               </div>
-              <div className="search-result__video">
+              <div className='search-result__video'>
                 <iframe width="560" height="315" src={"https://www.youtube.com/embed/" + data.links.youtube_id + "?controls=0"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
               <div className='search-result__below'>
                 <Timer lastLaunchDate={lastLaunchDate} />
                 <div className='search-result__below-id'>
-                    <b>ID:&nbsp;</b>{data.id}
+                    <span className='search-result__below-id-text'>ID:&nbsp;</span>{data.id}
                 </div>
               </div>
             </div>

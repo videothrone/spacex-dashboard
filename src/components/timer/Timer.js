@@ -18,7 +18,7 @@ const Timer = ({ lastLaunchDate }) => {
 
   return (
     <div className='search-result__below-elapsed-time'>
-      <h3 className='search-result__below-elapsed-time-headline'>Elapsed time since launch:</h3>
+      <h4 className='search-result__below-elapsed-time-headline'>Elapsed time since launch:</h4>
       {!elapsedTime && <div className='search-result__below-elapsed-time-counter'>Loading...</div>}
       {elapsedTime && <div className='search-result__below-elapsed-time-counter'>{formatTime(elapsedTime)}</div>}
     </div>

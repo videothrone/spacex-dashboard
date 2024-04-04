@@ -5,8 +5,8 @@ function App() {
   return (
     <>
       <header>
-        <div className="header__headline-wrapper">
-          <h1 className="header__headline font-gradient">SPACEX ✹ DASHBOARD</h1>
+        <div className='header__headline-wrapper'>
+          <h1 className='header__headline font-gradient'>SPACEX <span aria-hidden='true'>✹</span> DASHBOARD</h1>
         </div>
       </header>
       <main>
