@@ -40,5 +40,4 @@ A minimal React-based SPA / Dashboard that displays launch data via the SpaceX A
 -  More Cross-Browser testing is due
 -  The boxes in the LatestLaunches component are a bit barren, maybe add additional info and wiki links
 -  Add more info to the search result
--  Refactor the latest launches boxes to a reusable component
 -  Even though the app doesn't do much with the string from the SearchBar, sanitizing the input could make sense
