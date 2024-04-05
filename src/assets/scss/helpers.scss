@@ -5,15 +5,20 @@
   -webkit-text-fill-color: transparent;
 }
 
+.box-shadow {
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--color-black);
+  box-shadow: 0.3rem 0.3rem var(--color-black);
+}
+
 .visually-hidden {
-  position: absolute;
-  position: absolute !important;
-  width: 1px !important;
+  border: 0 !important;
+  clip: rect(0,0,0,0) !important;
   height: 1px !important;
-  padding: 0 !important;
   margin: -1px !important;
   overflow: hidden !important;
-  clip: rect(0,0,0,0) !important;
+  padding: 0 !important;
+  position: absolute !important;
   white-space: nowrap !important;
-  border: 0 !important;
+  width: 1px !important;
 }

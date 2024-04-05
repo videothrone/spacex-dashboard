@@ -37,5 +37,5 @@ export const copyIDToClipboard = (event, setOverlayMessage, setShowOverlay) => {
   setShowOverlay(true);
   setTimeout(() => {
     setShowOverlay(false);
-  }, 750);
+  }, 800);
 }

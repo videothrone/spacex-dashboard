@@ -34,8 +34,8 @@ const GetLaunches = () => {
       <div className='past-launch'>
       {loading && <Loader />}
       {!loading && (
-        <div>
-          <h2 className='font-gradient'>Latest launches</h2>
+        <>
+          <h2 className='past-launch__headline font-gradient'>Latest launches</h2>
           <div className='past-launch-elements'>
           {launches.map(({ name, id, links: { patch: { small: image } } }, index) => (
               <LaunchBox
@@ -45,11 +45,12 @@ const GetLaunches = () => {
                 image={image}
                 index={index}
                 handleCopyToClipboard={handleCopyToClipboard}
+                className='box-shadow'
               />
             ))}
           </div>
-          {showOverlay && <Overlay message={overlayMessage} />}
-        </div>
+          {showOverlay && <Overlay message={overlayMessage} className='box-shadow'/>}
+        </>
       )}
       </div>
     )

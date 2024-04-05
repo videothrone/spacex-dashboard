@@ -1,8 +1,8 @@
 import './searchbar.scss';
 
-export default function SearchBar ({searchItems, searchForm}) {
+export default function SearchBar ({searchItems, searchForm, className}) {
   return (
-    <div className='searchbar-container'>
+    <div className={`searchbar-container ${className}`}>
       <form ref={searchForm} className='searchbar'>
         <label htmlFor='search' className='visually-hidden'>Search launch by ID</label>
         <input

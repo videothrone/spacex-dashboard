@@ -45,13 +45,13 @@ const SearchLaunches = () => {
 
   return (
     <>
-      <SearchBar searchItems={searchItems} searchForm={searchForm} />
+      <SearchBar searchItems={searchItems} searchForm={searchForm} className='box-shadow'/>
       {searching && <div className='error-msg'><Loader /></div>}
       {errorMsg && <div className='error-msg'>Search ID is not valid</div>}
       {!loading && !errorMsg && (
       <div className='search-result'>
         <h2 className="search-result__headline font-gradient">Search result</h2>
-            <div className='search-result-container'>
+            <div className='search-result-container box-shadow'>
               <div className='search-result__above'>
                 <h2 className='search-result__above-name'>
                   {data.name}
