@@ -31,12 +31,12 @@ const GetLaunches = () => {
     };
 
     return (
-      <div className='past-launch'>
+      <div className='latest-launches'>
       {loading && <Loader />}
       {!loading && (
         <>
-          <h2 className='past-launch__headline font-gradient'>Latest launches</h2>
-          <div className='past-launch-elements'>
+          <h2 className='latest-launches__headline font-gradient'>Latest launches</h2>
+          <div className='latest-launches-elements'>
           {launches.map(({ name, id, links: { patch: { small: image } } }, index) => (
               <LaunchBox
                 key={index}
