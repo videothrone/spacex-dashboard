@@ -13,7 +13,7 @@ export default function SearchBar ({searchItems, searchForm, className}) {
             placeholder='Get more info by ID...'
             autoComplete='off'
           />
-        <button className='submit-button' onClick={searchItems} type='submit'>Search</button>
+        <button className='button searchbar__button' onClick={searchItems} type='submit'>Search</button>
       </form>
     </div>
   )

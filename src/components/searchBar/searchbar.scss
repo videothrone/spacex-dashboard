@@ -21,7 +21,7 @@
 }
 
 .searchbar-container input[type=search] {
-  border: solid .3rem var(--light-crimson);
+  border: solid 0.3rem var(--light-crimson);
   border-radius: 0.5rem;
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.7rem;
@@ -64,7 +64,7 @@
   }
 }
 
-.submit-button {
+.searchbar__button {
   background-color: var(--light-crimson);
   border: solid .3rem var(--light-crimson);
   border-radius: 0.5rem;
@@ -82,7 +82,7 @@
   transition: color 0.3s ease-out, background 0.3s ease-in;
 }
 
-.submit-button:hover {
+.searchbar__button:hover {
   background-color: var(--white);
   color: var(--light-crimson);
   -o-transition: color 0.3s ease-out, background 0.3s ease-in;
@@ -92,12 +92,12 @@
   transition: color 0.3s ease-out, background 0.3s ease-in;
 }
 
-.submit-button:focus {
+.searchbar__button:focus {
   outline: none;
 }
 
 @media all and (max-width: 560px) {
-  .submit-button {
+  .searchbar__button {
     width: 100%;
   }
 }
