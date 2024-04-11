@@ -26,12 +26,15 @@ A minimal React-based SPA / Dashboard that displays launch data via the unoffici
 -  Built with create-react-app (though probably will try to switch out for Vite down the line)
 -  Uses the unofficial open source [SpaceX-API v4](https://github.com/r-spacex/SpaceX-API/blob/master/README.md). All used endpoints are `GET` requests without any need for authentication.
 -  API calls done with Axios
+-  Icons are pulled from FontAwesome
 
 ## Features
 
 -  On load the app pulls the latest launches from the SpaceX API and displays them as little info boxes
+-  A pagination enables the user to click through all launches
 -  A search bar allows the user to search for individual launch IDs. The app then loads and displays additional data including the launch video in a more prominent info box
 -  IDs can be copied to the clipboard with a button to make the search less of a hassle
+-  If the page is scrolled, a button appears that enables users to scroll to the top
 
 ## To-Do
 
@@ -41,3 +44,4 @@ A minimal React-based SPA / Dashboard that displays launch data via the unoffici
 -  The boxes in the LatestLaunches component are a bit barren, maybe add additional info and wiki links
 -  Add more info to the search result box
 -  Even though the app doesn't do much with the string from the SearchBar, sanitizing the input could make sense
+-  Some basic validation to the SearchBar makes probably sense
