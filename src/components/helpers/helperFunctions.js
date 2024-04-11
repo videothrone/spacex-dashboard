@@ -29,7 +29,7 @@ export const formatTime = (time) => {
 
 // Copy launch ID to clipboard
 export const copyIDToClipboard = (event, setOverlayMessage, setShowOverlay) => {
-  const parentDiv = event.target.closest('.past-launch-elements__id');
+  const parentDiv = event.target.closest('.latest-launch__list-item-id');
   const dataId = parentDiv.getAttribute('data-id');
 
   navigator.clipboard.writeText(dataId);
@@ -39,3 +39,11 @@ export const copyIDToClipboard = (event, setOverlayMessage, setShowOverlay) => {
     setShowOverlay(false);
   }, 800);
 }
+
+// Scroll to top of viewport
+export const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};

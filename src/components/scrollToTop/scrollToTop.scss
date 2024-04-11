@@ -1,0 +1,31 @@
+.latest-launches__scroll-to-top {
+  -moz-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -ms-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -o-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-out, background 0.3s ease-in;
+  background-color: var(--light-crimson);
+  border-radius: 0.5rem;
+  border: solid .3rem var(--light-crimson);
+  bottom: 2rem;
+  color: var(--color-white);
+  cursor: pointer;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.7rem;
+  height: var(--button-size);
+  min-width: var(--button-size);
+  position: fixed;
+  right: 2.2rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease-out, background 0.3s ease-in;
+  z-index: 666;
+
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--light-crimson);
+    -o-transition: color 0.3s ease-out, background 0.3s ease-in;
+    -ms-transition: color 0.3s ease-out, background 0.3s ease-in;
+    -moz-transition: color 0.3s ease-out, background 0.3s ease-in;
+    -webkit-transition: color 0.3s ease-out, background 0.3s ease-in;
+    transition: color 0.3s ease-out, background 0.3s ease-in;
+  }
+}
