@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.0] - 2024-04-11
+
+### Changed
+* LatestLaunches has now a pagination to click through all launches
+* If user scrolls page, a ScrollTopTop button enables to scroll up
+* Adjust LatestLaunches, SearchBar class names and some global color variable names
+* Some small CSS mobile fixes to fonts, button sizes
+
+### Added
+* Add ScrollToTop, Pagination components to LatestLaunches
+* Add total launches to LatestLaunches
+* Add [Craco](https://www.npmjs.com/package/@craco/craco) to enable global SCSS imports
+* Add list-reset mixin
+* Add [FontAwesome](https://fontawesome.com/) to replace own icon(s)
+
 ## [2.0.2] - 2024-04-05
 
 ### Changed
