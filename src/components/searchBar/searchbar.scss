@@ -68,7 +68,7 @@
   background-color: var(--light-crimson);
   border: solid .3rem var(--light-crimson);
   border-radius: 0.5rem;
-  color: var(--white);
+  color: var(--color-white);
   cursor: pointer;
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.7rem;
@@ -80,20 +80,20 @@
   -moz-transition: color 0.3s ease-out, background 0.3s ease-in;
   -webkit-transition: color 0.3s ease-out, background 0.3s ease-in;
   transition: color 0.3s ease-out, background 0.3s ease-in;
-}
 
-.searchbar__button:hover {
-  background-color: var(--white);
-  color: var(--light-crimson);
-  -o-transition: color 0.3s ease-out, background 0.3s ease-in;
-  -ms-transition: color 0.3s ease-out, background 0.3s ease-in;
-  -moz-transition: color 0.3s ease-out, background 0.3s ease-in;
-  -webkit-transition: color 0.3s ease-out, background 0.3s ease-in;
-  transition: color 0.3s ease-out, background 0.3s ease-in;
-}
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--light-crimson);
+    -o-transition: color 0.3s ease-out, background 0.3s ease-in;
+    -ms-transition: color 0.3s ease-out, background 0.3s ease-in;
+    -moz-transition: color 0.3s ease-out, background 0.3s ease-in;
+    -webkit-transition: color 0.3s ease-out, background 0.3s ease-in;
+    transition: color 0.3s ease-out, background 0.3s ease-in;
+  }
 
-.searchbar__button:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 @media all and (max-width: 560px) {
