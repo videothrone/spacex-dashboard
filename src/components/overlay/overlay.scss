@@ -23,7 +23,6 @@
   border: 0;
   color: var(--color-white);
   fill: #fff;
-  margin-bottom: -0.25rem;
   margin-left: 0.5rem;
   width: 1.8rem;
 }
@@ -32,6 +31,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
