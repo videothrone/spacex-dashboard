@@ -1,0 +1,64 @@
+:root {
+  --button-size: 4.3rem;
+  --button-size-mobile: 3.5rem;
+}
+
+.pagination {
+  margin-top: 1rem;
+}
+
+.pagination__list {
+  @include list-reset();
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pagination__button {
+  background-color: var(--light-crimson);
+  border: solid .3rem var(--light-crimson);
+  border-radius: 0.5rem;
+  color: var(--color-white);
+  cursor: pointer;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.7rem;
+  height: var(--button-size);
+  min-width: var(--button-size);
+  text-transform: uppercase;
+  -o-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -ms-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -moz-transition: color 0.3s ease-out, background 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-out, background 0.3s ease-in;
+  transition: color 0.3s ease-out, background 0.3s ease-in;
+
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--light-crimson);
+    -o-transition: color 0.3s ease-out, background 0.3s ease-in;
+    -ms-transition: color 0.3s ease-out, background 0.3s ease-in;
+    -moz-transition: color 0.3s ease-out, background 0.3s ease-in;
+    -webkit-transition: color 0.3s ease-out, background 0.3s ease-in;
+    transition: color 0.3s ease-out, background 0.3s ease-in;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .pagination__button {
+    height: var(--button-size-mobile);
+    min-width: var(--button-size-mobile);
+  }
+}
+
+.pagination__button--current {
+  background-color: var(--color-white);
+  color: var(--light-crimson);
+}
+
+.pagination__item--ellipsis {
+  pointer-events: none;
+}
