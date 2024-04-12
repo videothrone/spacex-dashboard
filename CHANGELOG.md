@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.1] - 2024-04-12
+
+### Changed
+* Adjust ScrollTopTop button mobile position, so in won't overlap other buttons
+* Removed unnecessary padding of ScrollToTop button
+
+### Fixed
+* ScrollToTop now works in Chrome and only if it makes sense to scroll, based on the visibility of the ScrollToTop button
+
 ## [2.1.0] - 2024-04-11
 
 ### Changed

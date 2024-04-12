@@ -1,6 +1,7 @@
 {
   "name": "spacex-react",
-  "version": "2.1.0",
+  "version": "2.1.1",
+  "homepage": "https://space-x-dash.netlify.app/",
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.1.0",
