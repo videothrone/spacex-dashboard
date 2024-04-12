@@ -42,8 +42,15 @@ export const copyIDToClipboard = (event, setOverlayMessage, setShowOverlay) => {
 
 // Scroll to top of viewport
 export const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
+  const isScrollToTopVisible = document.querySelector('.latest-launches__scroll-to-top');
+
+  // Timeout for Chrome, since scrollTo() action fires before Chrome's default scroll to html anchor event
+  setTimeout(() => {
+    if (isScrollToTopVisible) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  }, 0);
 };
