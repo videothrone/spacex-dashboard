@@ -44,4 +44,4 @@ A minimal React-based SPA / Dashboard that displays launch data via the unoffici
 -  The boxes in the LatestLaunches component are a bit barren, maybe add additional info and wiki links
 -  Add more info to the search result box
 -  Even though the app doesn't do much with the string from the SearchBar, sanitizing the input could make sense
--  Some basic validation to the SearchBar makes probably sense
+-  While the search input has basic validation, additional validation and error messages could be an option
