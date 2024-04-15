@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import Loader from '../loader/Loader.js';
 import SearchBar from '../searchBar/SearchBar.js';
 import Timer from '../timer/Timer.js';
+import Error from '../error/Error.js';
 import { makeApiCall } from '../helpers/makeApiCall.js';
 import './searchLaunches.scss'
 
@@ -45,10 +46,10 @@ const SearchLaunches = () => {
 
   return (
     <>
-      <SearchBar searchItems={searchItems} searchForm={searchForm} className='box-shadow'/>
+      <SearchBar searchItems={searchItems} searchForm={searchForm} setErrorMsg={setErrorMsg} className='box-shadow'/>
       {searching && <div className='error-msg'><Loader /></div>}
-      {errorMsg && <div className='error-msg'>Search ID is not valid</div>}
-      {!loading && !errorMsg && (
+      {errorMsg && <Error message='Search ID is not valid' />}
+      {!loading && !errorMsg && data && (
       <div className='search-result'>
         <h2 className="search-result__headline font-gradient">Search result</h2>
             <div className='search-result-container box-shadow'>
@@ -62,7 +63,14 @@ const SearchLaunches = () => {
                 </div>
               </div>
               <div className='search-result__video'>
-                <iframe width="560" height="315" src={"https://www.youtube.com/embed/" + data.links.youtube_id + "?controls=0"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe
+                  width="560"
+                  height="315"
+                  src={"https://www.youtube.com/embed/" + data.links.youtube_id + "?controls=0"}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen />
               </div>
               <div className='search-result__below'>
                 <Timer lastLaunchDate={lastLaunchDate} />
