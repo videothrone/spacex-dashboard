@@ -1,6 +1,6 @@
 {
   "name": "spacex-react",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "homepage": "https://space-x-dash.netlify.app/",
   "private": true,
   "dependencies": {

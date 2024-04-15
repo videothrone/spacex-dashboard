@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.2] - 2024-04-15
+
+### Changed
+* Add basic input validation to SearchBar input
+* Replace basic error message for SearchLaunches /w reusable component
+
+### Added
+* Add Error component
+* Add global mixin file that imports all other possible mixins
+
 ## [2.1.1] - 2024-04-12
 
 ### Changed
