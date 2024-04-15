@@ -1,0 +1,22 @@
+.error__message {
+  background-color: var(--info-box);
+  border-radius: 0.5rem;
+  color: var(--indicator-failure);
+  font-size: 1.6rem;
+  margin: 2rem var(--padding-left-right-desktop-large);
+  overflow: hidden;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media all and (max-width: 1440px) {
+  .error__message{
+    margin: 2rem var(--padding-left-right-desktop);
+  }
+}
+
+@media all and (max-width: 900px) {
+  .error__message {
+    margin: 2rem;
+  }
+}
