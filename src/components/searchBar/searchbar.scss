@@ -20,33 +20,51 @@
   }
 }
 
-.searchbar-container input[type=search] {
+.searchbar__input-container {
+  background-color: var(--color-white);
   border: solid 0.3rem var(--light-crimson);
   border-radius: 0.5rem;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-between;
   min-width: 30rem;
   padding: 1rem;
-
-  &::-webkit-search-cancel-button {
-    cursor: pointer;
-  }
-}
-
-.searchbar-container input[type=search]:focus {
-  outline: none;
 }
 
 @media all and (max-width: 560px) {
-  .searchbar-container input[type=search] {
+  .searchbar__input-container {
     width: 100%;
   }
 }
 
-@media all and (max-width: 479px) {
-  .searchbar-container input[type=search] {
-    min-width: 100%;
+.searchbar__input {
+  border: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.7rem;
+  outline: none;
+
+  &::-webkit-search-cancel-button {
+    display: none;
   }
+}
+
+.searchbar__cancel-button {
+  background-color: transparent;
+  border: 0;
+  color: var(--light-crimson);
+  cursor: pointer;
+  margin-bottom: -0.25rem;
+  padding-right: 0;
+  transition: color 0.3s ease-out, background 0.3s ease-in;
+
+  &:hover {
+    color: var(--color-black);
+    transition: color 0.3s ease-out, background 0.3s ease-in;
+  }
+}
+
+.searchbar__cancel-button-icon {
+  height: 1.7rem;
+  width: 1.7rem;
 }
 
 .searchbar {
@@ -64,7 +82,7 @@
   }
 }
 
-.searchbar__button {
+.searchbar__submit-button {
   background-color: var(--light-crimson);
   border: solid .3rem var(--light-crimson);
   border-radius: 0.5rem;
@@ -75,19 +93,11 @@
   min-width: 12rem;
   padding: 1rem;
   text-transform: uppercase;
-  -o-transition: color 0.3s ease-out, background 0.3s ease-in;
-  -ms-transition: color 0.3s ease-out, background 0.3s ease-in;
-  -moz-transition: color 0.3s ease-out, background 0.3s ease-in;
-  -webkit-transition: color 0.3s ease-out, background 0.3s ease-in;
   transition: color 0.3s ease-out, background 0.3s ease-in;
 
   &:hover {
     background-color: var(--color-white);
     color: var(--light-crimson);
-    -o-transition: color 0.3s ease-out, background 0.3s ease-in;
-    -ms-transition: color 0.3s ease-out, background 0.3s ease-in;
-    -moz-transition: color 0.3s ease-out, background 0.3s ease-in;
-    -webkit-transition: color 0.3s ease-out, background 0.3s ease-in;
     transition: color 0.3s ease-out, background 0.3s ease-in;
   }
 
@@ -97,7 +107,13 @@
 }
 
 @media all and (max-width: 560px) {
-  .searchbar__button {
+  .searchbar__submit-button {
     width: 100%;
+  }
+}
+
+@media all and (max-width: 479px) {
+  .searchbar__submit-button {
+    min-width: 100%;
   }
 }

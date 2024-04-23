@@ -1,8 +1,12 @@
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import './searchbar.scss';
 
 export default function SearchBar ({searchItems, searchForm, setErrorMsg, className}) {
+  const [searchValue, setSearchValue] = useState('');
+
   const handleSubmit = (event) => {
-    // Prevent form submission by default
     event.preventDefault();
 
     const form = searchForm.current;
@@ -16,30 +20,50 @@ export default function SearchBar ({searchItems, searchForm, setErrorMsg, classN
 
     // Validate input for alphanumeric characters
     const alphanumericRegex = /^[a-zA-Z0-9\s]*$/;
-
     if (!alphanumericRegex.test(searchedID)) {
       setErrorMsg(true);
       return;
-    } else {
-      searchItems(event);
     }
 
+    searchItems(event);
+    setSearchValue(searchedID);
+  };
+
+  const handleCancelButtonClick = (event) => {
+    event.preventDefault();
+    searchForm.current.querySelector('input').focus();
+    setSearchValue('');
+    setErrorMsg(false);
+  };
+
+  const handleInputChange = (event) => {
+    setSearchValue(event.target.value);
   };
 
   return (
     <div className={`searchbar-container ${className}`}>
       <form ref={searchForm} className='searchbar' onSubmit={handleSubmit}>
         <label htmlFor='search' className='visually-hidden'>Search launch by ID</label>
-        <input
-            type='search'
-            title='Search launch by ID'
-            id='search'
-            name='search'
-            placeholder='Get more info by ID...'
-            autoComplete='off'
-            required="required"
-          />
-        <button className='button searchbar__button' type='submit'>Search</button>
+        <div className='searchbar__input-container'>
+          <input
+              className='searchbar__input'
+              type='search'
+              title='Search launch by ID'
+              id='search'
+              name='search'
+              placeholder='Get more info by ID...'
+              autoComplete='off'
+              required="required"
+              value={searchValue}
+              onChange={handleInputChange}
+            />
+          {searchValue && (
+            <button className='button searchbar__cancel-button' aria-label='x' type='button' onClick={handleCancelButtonClick}>
+              <FontAwesomeIcon icon={faXmark} className='searchbar__cancel-button-icon' />
+            </button>
+          )}
+        </div>
+        <button className='button searchbar__submit-button' type='submit'>Search</button>
       </form>
     </div>
   )
