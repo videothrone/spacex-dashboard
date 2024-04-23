@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.3] - 2024-04-23
+
+### Changed
+* Style SearchBar input cancel button /w FontAwesome icon
+* Add logic to cancel button, thus only showing it when user enters search value
+
 ## [2.1.2] - 2024-04-15
 
 ### Changed
