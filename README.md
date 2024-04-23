@@ -21,6 +21,10 @@ A minimal React-based SPA / Dashboard that displays launch data via the unoffici
 
 [https://space-x-dash.netlify.app/](https://space-x-dash.netlify.app/)
 
+## Deployment Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f78f5641-3d7f-4dea-97c8-330f604b4d83/deploy-status)](https://app.netlify.com/sites/space-x-dash/deploys)
+
 ## Tech
 
 -  Built with create-react-app (though probably will try to switch out for Vite down the line)
