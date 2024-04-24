@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.4] - 2024-04-24
+
+### Changed
+* Added additional scrollToHash helper function to LatestLaunches component, so clicking on pagination scrolls to the component instead of scrolling to the top
+
 ## [2.1.3] - 2024-04-23
 
 ### Changed
