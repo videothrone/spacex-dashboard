@@ -54,3 +54,11 @@ export const scrollToTop = () => {
     }
   }, 0);
 };
+
+// Scroll to #hash element
+export const scrollToHash = (hash) => {
+  const element = document.getElementById(hash);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};

@@ -4,7 +4,7 @@ import Overlay from '../overlay/Overlay.js';
 import LaunchBox from '../launchBox/LaunchBox.js';
 import Pagination from '../pagination/Pagination.js';
 import ScrollToTop from '../scrollToTop/ScrollToTop.js';
-import { copyIDToClipboard, scrollToTop } from '../helpers/helperFunctions.js';
+import { copyIDToClipboard, scrollToTop, scrollToHash } from '../helpers/helperFunctions.js';
 import { makeApiCall } from '../helpers/makeApiCall.js';
 import './latestLaunches.scss'
 
@@ -52,11 +52,11 @@ const GetLaunches = () => {
       const startIndex = (page - 1) * itemsPerPage;
       const endIndex = startIndex + itemsPerPage;
       setVisibleLaunches(launches.slice(startIndex, endIndex));
-      scrollToTop();
+      scrollToHash('latest-launches');
     };
 
     return (
-      <div className='latest-launches'>
+      <div className='latest-launches' id='latest-launches'>
       {loading && <Loader />}
       {!loading && (
         <>
