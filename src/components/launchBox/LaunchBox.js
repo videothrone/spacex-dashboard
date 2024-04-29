@@ -2,9 +2,9 @@ import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './launchBox.scss';
 
-export default function LaunchBox({name, id, image, index, handleCopyToClipboard, className}) {
+export default function LaunchBox({name, id, success, image, index, handleCopyToClipboard, className}) {
   return (
-    <div className={`latest-launch__list-item ${className}`} key={index}>
+    <div className={`latest-launch__list-item ${className}`} key={index} data-success={success}>
       <h3 className='latest-launch__list-item-name'>{name}</h3>
       <img className='latest-launch__list-item-image' src={image} alt={`The patch of the crew ${name}`} />
       <div className='latest-launch__list-item-id' data-id={id}>
