@@ -34,6 +34,16 @@
   }
 }
 
+.latest-launches__header-headline-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.latest-launches__header-filter {
+  padding-bottom: 0.5rem;
+}
+
 .latest-launches__header-divider {
   border: 0;
   border-top: 0.5rem solid var(--color-black);

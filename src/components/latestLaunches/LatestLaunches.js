@@ -4,25 +4,26 @@ import Overlay from '../overlay/Overlay.js';
 import LaunchBox from '../launchBox/LaunchBox.js';
 import Pagination from '../pagination/Pagination.js';
 import ScrollToTop from '../scrollToTop/ScrollToTop.js';
+import Filter from '../filter/Filter.js';
 import { copyIDToClipboard, scrollToTop, scrollToHash } from '../helpers/helperFunctions.js';
 import { makeApiCall } from '../helpers/makeApiCall.js';
 import './latestLaunches.scss'
 
-const GetLaunches = () => {
+const LatestLaunches = () => {
     const [loading, setLoading] = useState(true);
     const [launches, setLaunches] = useState([]);
     const [showOverlay, setShowOverlay] = useState(false);
     const [overlayMessage, setOverlayMessage] = useState('');
-    const [visibleLaunches, setVisibleLaunches] = useState([]);
     const [scrolled, setScrolled] = useState(false);
+    const [filterValue, setFilterValue] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
       makeApiCall('past')
         .then((response) => {
           const latestLaunches = response.reverse();
+
           setLaunches(latestLaunches);
-          // Show the first 6 elements on page load
-          setVisibleLaunches(latestLaunches.slice(0, 6));
           setLoading(false);
         })
         .catch((error) => {
@@ -48,12 +49,24 @@ const GetLaunches = () => {
       copyIDToClipboard(event, setOverlayMessage, setShowOverlay);
     };
 
-    const handlePageChange = (page, itemsPerPage) => {
-      const startIndex = (page - 1) * itemsPerPage;
-      const endIndex = startIndex + itemsPerPage;
-      setVisibleLaunches(launches.slice(startIndex, endIndex));
+    const handlePageChange = (page) => {
+      setCurrentPage(page);
       scrollToHash('latest-launches');
     };
+
+    const handleFilterChange = (value) => {
+      setFilterValue(value);
+      setCurrentPage(1); // Reset to first page when applying filter
+    };
+
+    const filteredLaunches = filterValue
+      ? launches.filter((launch) => launch.success === (filterValue === 'success'))
+      : launches;
+
+    // Pagination setup and logic
+    const startIndex = (currentPage - 1) * 6;
+    const endIndex = startIndex + 6;
+    const visibleLaunches = filteredLaunches.slice(startIndex, endIndex);
 
     return (
       <div className='latest-launches' id='latest-launches'>
@@ -61,16 +74,20 @@ const GetLaunches = () => {
       {!loading && (
         <>
           <div className='latest-launches__header'>
-            <h2 className='latest-launches__header-headline font-gradient'>Latest launches</h2>
+            <div className='latest-launches__header-headline-filter'>
+              <h2 className='latest-launches__header-headline font-gradient'>Latest launches</h2>
+              <Filter className={'latest-launches__header-filter'} handleFilterChange={handleFilterChange} />
+            </div>
             <hr className='latest-launches__header-divider font-gradient'/>
-            <div className='latest-launches__header-total-launches font-gradient'>{launches.length} total launches</div>
+            <div className='latest-launches__header-total-launches font-gradient'>{filteredLaunches.length} total launches</div>
           </div>
           <div className='latest-launches__list'>
-            {visibleLaunches.map(({ name, id, links: { patch: { small: image } } }, index) => (
+            {visibleLaunches.map(({ name, id, success, links: { patch: { small: image } } }, index) => (
                 <LaunchBox
                   key={index}
                   name={name}
                   id={id}
+                  success={success}
                   image={image}
                   index={index}
                   handleCopyToClipboard={handleCopyToClipboard}
@@ -78,11 +95,12 @@ const GetLaunches = () => {
                 />
               ))}
             </div>
-            {launches.length > 6 && (
+            {filteredLaunches.length > 6 && (
               <Pagination
-                totalItems={launches.length}
+                totalItems={filteredLaunches.length}
                 itemsPerPage={6}
                 onPageChange={handlePageChange}
+                currentPageProp={currentPage}
                 className={'latest-launches__pagination'}
               />
             )}
@@ -99,4 +117,4 @@ const GetLaunches = () => {
     )
   }
 
-  export default GetLaunches;
+  export default LatestLaunches;
