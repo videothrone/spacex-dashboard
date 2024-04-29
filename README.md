@@ -35,6 +35,7 @@ A minimal React-based SPA / Dashboard that displays launch data via the unoffici
 ## Features
 
 -  On load the app pulls the latest launches from the SpaceX API and displays them as little info boxes
+-  The displayed launches can be filtered by successful and unsuccessful launches
 -  A pagination enables the user to click through all launches
 -  A search bar allows the user to search for individual launch IDs. The app then loads and displays additional data including the launch video in a more prominent info box
 -  IDs can be copied to the clipboard with a button to make the search less of a hassle
@@ -44,7 +45,6 @@ A minimal React-based SPA / Dashboard that displays launch data via the unoffici
 
 -  CSS probably still needs some clean-up and refactoring here and there
 -  Want to add SASS-mq or something similar
--  More Cross-Browser testing is due
 -  The boxes in the LatestLaunches component are a bit barren, maybe add additional info and wiki links
 -  Add more info to the search result box
 -  Even though the app doesn't do much with the string from the SearchBar, sanitizing the input could make sense
