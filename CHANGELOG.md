@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.2.0] - 2024-04-29
+
+### Changed
+* Add data-success attribute to LaunchBox component
+* Adjust LatestLaunches and Pagination component logic in regards to launches and pagination
+
+### Added
+* Create Filter component, add to LatestLaunches component
+* Add hidden-visually mixin
+
 ## [2.1.4] - 2024-04-24
 
 ### Changed
