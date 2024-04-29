@@ -1,0 +1,53 @@
+.filter {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  transition: .8s;
+
+  input[type="radio"] + label:hover::before,
+  input[type="radio"]:focus + label::before {
+    background: none;
+    box-shadow: inset 0 0 0 0.325rem var(--light-crimson), inset 0 0 0rem 0.5rem transparent, 0 0 0rem 0.5rem rgba(34,34,34, 0.2);
+  }
+
+  input[type="radio"]:checked + label::before {
+    background-color: var(--light-crimson);
+    box-shadow: inset 0 0 0 0.325rem var(--light-crimson), inset 0 0 0rem 0.5rem var(--color-white), 0 0 0rem 0 var(--color-black);
+    transition: 0s;
+  }
+
+  input[type="radio"] + label::before {
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 0 0.325rem var(--color-black), inset 0 0 0rem 0.5rem transparent, 0 0 0rem 0.5rem rgba(34, 34, 34, 0);
+    content: '';
+    display: block;
+    height: 2rem;
+    left: 0rem;
+    position: relative;
+    top: 0rem;
+    transition: .4s;
+    width: 2rem;
+  }
+}
+
+.filter__legend,
+.filter input[type="radio"] {
+  @include hidden-visually();
+}
+
+.filter__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.filter__options label {
+  color: var(--color-black);
+  cursor: pointer;
+  display: flex;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  gap: 0.5rem;
+}
+
+
