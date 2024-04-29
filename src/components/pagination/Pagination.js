@@ -1,11 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './pagination.scss';
 import { faAnglesLeft, faAngleLeft, faAngleRight, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Pagination = ({ totalItems, itemsPerPage, onPageChange, className }) => {
+const Pagination = ({ totalItems, itemsPerPage, onPageChange, currentPageProp, className }) => {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(currentPageProp);
+
+  useEffect(() => {
+    setCurrentPage(currentPageProp);
+  }, [currentPageProp]);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
