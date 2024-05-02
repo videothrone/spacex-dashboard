@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.2.1] - 2024-05-02
+
+### Changed
+* Add wriggle animation to Error component
+* Fix how data is conditionally rendered in SearchLauches, since it's an object and not an array
+
 ## [2.2.0] - 2024-04-29
 
 ### Changed
