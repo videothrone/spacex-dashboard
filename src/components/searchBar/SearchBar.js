@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import './searchbar.scss';
 
-export default function SearchBar ({searchItems, searchForm, setErrorMsg, className}) {
+export default function SearchBar ({searchItems, searchForm, setErrorMsg, setData, className}) {
   const [searchValue, setSearchValue] = useState('');
 
   const handleSubmit = (event) => {
@@ -34,6 +34,7 @@ export default function SearchBar ({searchItems, searchForm, setErrorMsg, classN
     searchForm.current.querySelector('input').focus();
     setSearchValue('');
     setErrorMsg(false);
+    setData({});
   };
 
   const handleInputChange = (event) => {

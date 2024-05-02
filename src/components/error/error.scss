@@ -1,3 +1,7 @@
+.error.animate {
+  animation: wiggle 0.5s ease-in-out;
+}
+
 .error__message {
   background-color: var(--info-box);
   border-radius: 0.5rem;
@@ -18,5 +22,23 @@
 @media all and (max-width: 900px) {
   .error__message {
     margin: 2rem;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
+  }
+  75% {
+    transform: rotate(-1.5deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }

@@ -9,7 +9,7 @@ import './searchLaunches.scss'
 const SearchLaunches = () => {
   const [loading, setLoading] = useState(true);
   const [searching, setSearching] = useState(false);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
   const [errorMsg, setErrorMsg] = useState(false);
   const [lastLaunchDate, setLastLaunchDate] = useState();
   const searchForm = useRef(null);
@@ -29,6 +29,7 @@ const SearchLaunches = () => {
       makeApiCall(searchedID)
         .then((response) => {
           const responseTime = response.date_unix*1000;
+          console.log(response)
 
           setData(response);
           setLoading(false);
@@ -46,10 +47,10 @@ const SearchLaunches = () => {
 
   return (
     <>
-      <SearchBar searchItems={searchItems} searchForm={searchForm} setErrorMsg={setErrorMsg} className='box-shadow'/>
+      <SearchBar searchItems={searchItems} searchForm={searchForm} setErrorMsg={setErrorMsg} setData={setData} className='box-shadow'/>
       {searching && <div className='error-msg'><Loader /></div>}
-      {errorMsg && <Error message='Search ID is not valid' />}
-      {!loading && !errorMsg && data && (
+      {errorMsg && <Error message='Search ID is not valid' searching={searching} />}
+      {!loading && !errorMsg && Object.keys(data).length > 0 && (
       <div className='search-result'>
         <h2 className="search-result__headline font-gradient">Search result</h2>
             <div className='search-result-container box-shadow'>
