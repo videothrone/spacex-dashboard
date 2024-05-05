@@ -16,6 +16,11 @@
   }
 }
 
+.latest-launch__list-item-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .latest-launch__list-item-name {
   font-size: 2rem;
   margin: 0;
