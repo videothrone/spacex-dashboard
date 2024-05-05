@@ -49,7 +49,7 @@ const SearchLaunches = () => {
     <>
       <SearchBar searchItems={searchItems} searchForm={searchForm} setErrorMsg={setErrorMsg} setData={setData} className='box-shadow'/>
       {searching && <div className='error-msg'><Loader /></div>}
-      {errorMsg && <Error message='Search ID is not valid' searching={searching} />}
+      {errorMsg && <Error message='Search ID is not valid' />}
       {!loading && !errorMsg && Object.keys(data).length > 0 && (
       <div className='search-result'>
         <h2 className="search-result__headline font-gradient">Search result</h2>
