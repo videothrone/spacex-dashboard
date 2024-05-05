@@ -3,7 +3,7 @@
   --launch-status-border-radius: 50%;
 }
 
-.launch-status__success {
+.launch-status--success {
   background-color: var(--indicator-success);
   border-radius: var(--launch-status-border-radius);
   display: inline-block;
@@ -11,7 +11,7 @@
   width: var(--launch-status-size)
 }
 
-.launch-status__failure {
+.launch-status--failure {
   background-color: var(--indicator-failure);
   border-radius: var(--launch-status-border-radius);
   display: inline-block;
