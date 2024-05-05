@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.2.2] - 2024-05-05
+
+### Changed
+* Remove animation logic from Error component
+
+### Added
+* Create LaunchStatus component, add to SearchLaunches and LaunchBox components
+
 ## [2.2.1] - 2024-05-02
 
 ### Changed
