@@ -1,0 +1,20 @@
+:root {
+  --launch-status-size: 2.5rem;
+  --launch-status-border-radius: 50%;
+}
+
+.launch-status__success {
+  background-color: var(--indicator-success);
+  border-radius: var(--launch-status-border-radius);
+  display: inline-block;
+  height: var(--launch-status-size);
+  width: var(--launch-status-size)
+}
+
+.launch-status__failure {
+  background-color: var(--indicator-failure);
+  border-radius: var(--launch-status-border-radius);
+  display: inline-block;
+  height: var(--launch-status-size);
+  width: var(--launch-status-size);
+}
