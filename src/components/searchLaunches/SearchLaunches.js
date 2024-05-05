@@ -3,6 +3,7 @@ import Loader from '../loader/Loader.js';
 import SearchBar from '../searchBar/SearchBar.js';
 import Timer from '../timer/Timer.js';
 import Error from '../error/Error.js';
+import LaunchStatus from '../launchStatus/LaunchStatus.js';
 import { makeApiCall } from '../helpers/makeApiCall.js';
 import './searchLaunches.scss'
 
@@ -59,8 +60,8 @@ const SearchLaunches = () => {
                   {data.name}
                 </h2>
                 <div className='search-result__above-indicator'>
-                  {data.success === true && <div className='search-result__above-indicator-success' alt='Launch successful'><span className='visually-hidden' >Launch successful</span></div>}
-                  {data.success === false && <div className='search-result__above-indicator-failure'alt='Launch was a failure'><span className='visually-hidden' >Launch was a failure</span></div>}
+                  {data.success === true && <LaunchStatus launchStatus={data.success} className='search-result__above-indicator-success'/>}
+                  {data.success === false && <LaunchStatus launchStatus={data.success} className='search-result__above-indicator-failure'/>}
                 </div>
               </div>
               <div className='search-result__video'>

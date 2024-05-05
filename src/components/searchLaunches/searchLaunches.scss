@@ -47,22 +47,6 @@
   }
 }
 
-.search-result__above-indicator-success {
-  background-color: var(--indicator-success);
-  border-radius: 50%;
-  display: inline-block;
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-.search-result__above-indicator-failure {
-  background-color: var(--indicator-failure);
-  border-radius: 50%;
-  display: inline-block;
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
 .search-result__video {
   height: 0;
   overflow: hidden;
