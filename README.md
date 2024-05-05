@@ -8,7 +8,7 @@ A minimal React-based SPA / Dashboard that displays launch data via the unoffici
 
 ## Preview
 
-[![SpaceX Dashboard](/public/screenshot1.png)](https://space-x-dash.netlify.app/)
+[![SpaceX Dashboard](/public/screenshot.png)](https://space-x-dash.netlify.app/)
 
 
 ## Local setup
