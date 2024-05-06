@@ -20,9 +20,7 @@ export const formatTime = (time) => {
   if (minutes > 0) {
     timeString.push(`${minutes}m`);
   }
-  if (seconds > 0) {
-    timeString.push(`${seconds}s`);
-  }
+  timeString.push(`${seconds}s`);
 
   return timeString.join(" ✹ ");
 };
