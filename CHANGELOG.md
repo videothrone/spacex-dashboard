@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.2.3] - 2024-05-06
+
+### Changed
+* Adjust formatTime() in helperFunctions.js so 0 is shown for seconds
+
 ## [2.2.2] - 2024-05-05
 
 ### Changed
