@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.2.4] - 2024-05-07
+
+### Changed
+* Fix LatestLaunch class
+
+### Added
+* Add border / box-shadow to LaunchStatus
+* Add :hover effect to LaunchBox copy button
+
 ## [2.2.3] - 2024-05-06
 
 ### Changed
