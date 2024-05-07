@@ -3,6 +3,11 @@
   --launch-status-border-radius: 50%;
 }
 
+.launch-status {
+  border: 0.2rem solid var(--color-black);
+  box-shadow: 0.2rem 0.2rem var(--color-black);
+}
+
 .launch-status--success {
   background-color: var(--indicator-success);
   border-radius: var(--launch-status-border-radius);
