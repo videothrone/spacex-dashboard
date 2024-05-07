@@ -14,7 +14,7 @@ export default function LaunchBox({name, id, success, image, index, handleCopyTo
       </div>
       <img className='latest-launch__list-item-image' src={image} alt={`The patch of the crew ${name}`} />
       <div className='latest-launch__list-item-id' data-id={id}>
-        <div className='latest-launch-list-item-id-text'>
+        <div className='latest-launch__list-item-id-text'>
           <span className='latest-launch__list-item-text-id'>ID: </span>{id}
         </div>
         <button className='latest-launch__list-item-copy-button' onClick={handleCopyToClipboard}>
