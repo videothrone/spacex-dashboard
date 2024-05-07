@@ -49,11 +49,16 @@
   margin-right: 1.5rem;
 }
 
-.latest-launch__list-item-copy {
+.latest-launch__list-item-copy-button {
   background-color: transparent;
   border: 0;
   color: var(--color-white);
   padding: 0;
+
+  &:hover {
+    color: var(--color-black);
+    transition: 0.3s ease-in-out;
+  }
 }
 
 .latest-launch__list-item-copy-icon {

@@ -17,7 +17,7 @@ export default function LaunchBox({name, id, success, image, index, handleCopyTo
         <div className='latest-launch-list-item-id-text'>
           <span className='latest-launch__list-item-text-id'>ID: </span>{id}
         </div>
-        <button className='latest-launch__list-item-copy' onClick={handleCopyToClipboard}>
+        <button className='latest-launch__list-item-copy-button' onClick={handleCopyToClipboard}>
           <span className='visually-hidden'>Copy launch ID to clipboard</span>
           <FontAwesomeIcon icon={faCopy} className='latest-launch__list-item-copy-icon'/>
         </button>
